@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moises Animaciones simples</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/estilos.css"/>
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+ 
+</head>
+<body>
+  <header>
+    <a href="#">
+      
+      <span class="moises">Moises Frontend</span>
+    </a>
+    <div class="header-right">
+      <nav>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/moises-mannarino-3633a4106/" target="_blank">Linkedin</a></li>
+          <li><a href="https://github.com/Mannarino" target="_blank">Github</a></li>
+          
+          <li><a href="https://platzi.com/@MoisesMannarino/" target="_blank">Platzi</a></li>
+        </ul>
+      </nav>
+     
+    </div>
+  </header>
+  <section class="blog">
+    <article class="portada-hola">
+      
+      <p>
+       En este sitio encontras unas animaciones que realice con css y js.</p>
+    </article>
+    <article class="portada">
+      
+      
+    </article>
+    <article class="portada-2">
+      <div class="platzi">
+        <div class="platzi-left"></div>
+        <div class="platzi-right"></div>
+
+      </div>
+    </article>
+    <section class="blog-items">
+      <article class="item-blog ">
+      	<div class="notificacion"><i class='fa fa-bell' id="campana" aria-hidden='true'></i>
+      	</div>
+      	<div class="contador" id="contador">0</div>
+      	<button id="notificador" class="notificador">Presione para sonar campanita</button>
+      	<p class="parrafo">Animacion creada con css y controlada por un script javascript que cree.</p>
+      </article>
+     
+      <article class="item-blog ">
+       <div class="notificacion animacion-salida"><i class="fa fa-code" aria-hidden="true"></i>
+      	</div>
+      
+      	
+      </article>
+      <article class="item-blog ">
+        <div class="notificacion"><i class="fa fa-hand-spock-o chau" aria-hidden="true"></i>
+      	</div>
+      	<span class="espacio">f</span>
+      	
+      	<p class="parrafo">Animacion <br> creada <br> con css .</p>
+      </article>
+     
+    </section>
+    
+  </section>
+  <script type="text/javascript">
+  	var botonCampana= document.getElementById('notificador');
+  	var elementoContador= document.getElementById('contador');
+  	var campanita= document.getElementById('campana');
+
+  	contando=0;
+  	botonCampana.addEventListener('click',function(){
+        
+        
+        campanita.classList.add('mover-campana');
+  	});
+  	campanita.addEventListener('animationend',function(){
+  		campanita.classList.remove('mover-campana');
+  		contando=++contando;
+        elementoContador.innerHTML=contando;
+  	})
+  </script>
+  <script src=”prefixfree.min.js” type="text/javascript"></script>
+</body>
+</html>
